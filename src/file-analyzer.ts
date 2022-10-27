@@ -5,7 +5,7 @@ import { Comments, EnhancedTag, FileAnalyzerResults } from './types';
 import { warning } from '@actions/core';
 
 export async function fileAnalyzer(
-  diffs: { filename: string; patch?: string }[],
+  diffs: { filename: string; patch?: string; blob_url: string }[],
   tags: string[]
 ): Promise<FileAnalyzerResults> {
   const enhancedTags = tags.map(tag => ({
@@ -15,7 +15,7 @@ export async function fileAnalyzer(
   const ignoreMinSize = Math.min(...tags.map(t => t.length));
   const result: FileAnalyzerResults = [];
 
-  for (const { filename, patch } of diffs) {
+  for (const { filename, patch, blob_url } of diffs) {
     const absolutePath = path.join(process.cwd(), filename);
     const newComments = parsePatch(enhancedTags, patch);
     let parsedComments: Comments = {};
@@ -38,7 +38,8 @@ export async function fileAnalyzer(
 
     result.push({
       file: filename,
-      comments: parsedComments
+      comments: parsedComments,
+      blob_url: blob_url
     });
   }
 

@@ -7,20 +7,25 @@ exports[`FormatComment should format comment consistently 1`] = `
 
 ##### FIXME:
 
-- [ ] :add implementation \`Line: 10\` 
+- [ ] :add implementation \`Line: 10\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L10
 
 ##### NOTE
 
-- [ ] Please don't forget review \`Line: 11\` 
-- [ ] another note \`Line: 20\` 
+- [ ] Please don't forget review \`Line: 11\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L11
+- [ ] another note \`Line: 20\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L20
 
 ##### tODo:
 
-- [ ] this should present \`Line: 13\` 
+- [ ] this should present \`Line: 13\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L13
 
 ##### missingBody
 
 - [ ] <space> \`Line: 1\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L1
 </details>
 
 <details>
@@ -28,16 +33,20 @@ exports[`FormatComment should format comment consistently 1`] = `
 
 ##### FIXME:
 
-- [ ] :add implementation \`Line: 20\` 
+- [ ] :add implementation \`Line: 20\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L20
 
 ##### NOTE
 
-- [ ] Please don't forget review \`Line: 21\` 
-- [ ] another note \`Line: 2\` 
+- [ ] Please don't forget review \`Line: 21\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L21
+- [ ] another note \`Line: 2\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L2
 
 ##### tODo:
 
-- [ ] this should present \`Line: 5\` 
+- [ ] this should present \`Line: 5\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L5-L10
 </details>
 
 "
@@ -50,20 +59,25 @@ exports[`FormatComment should tag actor with reviewMsg 1`] = `
 
 ##### FIXME:
 
-- [ ] :add implementation \`Line: 10\` 
+- [ ] :add implementation \`Line: 10\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L10
 
 ##### NOTE
 
-- [ ] Please don't forget review \`Line: 11\` 
-- [ ] another note \`Line: 20\` 
+- [ ] Please don't forget review \`Line: 11\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L11
+- [ ] another note \`Line: 20\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L20
 
 ##### tODo:
 
-- [ ] this should present \`Line: 13\` 
+- [ ] this should present \`Line: 13\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L13
 
 ##### missingBody
 
 - [ ] <space> \`Line: 1\`
+https://githubHost/owner/repo/blob/sha/mockFile0.js#L1
 </details>
 
 <details>
@@ -71,16 +85,20 @@ exports[`FormatComment should tag actor with reviewMsg 1`] = `
 
 ##### FIXME:
 
-- [ ] :add implementation \`Line: 20\` 
+- [ ] :add implementation \`Line: 20\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L20
 
 ##### NOTE
 
-- [ ] Please don't forget review \`Line: 21\` 
-- [ ] another note \`Line: 2\` 
+- [ ] Please don't forget review \`Line: 21\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L21
+- [ ] another note \`Line: 2\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L2
 
 ##### tODo:
 
-- [ ] this should present \`Line: 5\` 
+- [ ] this should present \`Line: 5\`
+https://githubHost/owner/repo/blob/sha/mockFile2.js#L5
 </details>
 
 ---

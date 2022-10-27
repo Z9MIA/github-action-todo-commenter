@@ -20,6 +20,7 @@ export type ActionReviewerOptions = {
 export type FileAnalyzerResults = {
   file: string;
   comments: Comments;
+  blob_url: string;
 }[];
 
 export type GetInputParams = {

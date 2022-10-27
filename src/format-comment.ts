@@ -6,7 +6,7 @@ export function formatComment(
 ) {
   let message = `## ${title}\n`;
 
-  analyzedCommentsPerFile.forEach(({ comments, file }) => {
+  analyzedCommentsPerFile.forEach(({ comments, file, blob_url }) => {
     message += `<details>\n`;
     message += `<summary><strong>${file}</strong></summary>\n`;
 
@@ -16,9 +16,13 @@ export function formatComment(
       items.forEach(item => {
         if (item.comment === '') {
           message += `- [ ] <space> \`Line: ${item.line}\`\n`;
+          message += `${blob_url}#L${item.line}\n`;
+          // https://githubHost/owner/repo/blob/sha/filename
           return;
         }
-        message += `- [ ] ${item.comment} \`Line: ${item.line}\` \n`;
+        message += `- [ ] ${item.comment} \`Line: ${item.line}\`\n`;
+        message += `${blob_url}#L${item.line}\n`;
+        // https://githubHost/owner/repo/blob/sha/filename
       });
     });
 

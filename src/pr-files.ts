@@ -1,7 +1,7 @@
 import { GetFilesParams } from './types';
 import { exec as cbExec } from 'child_process';
 import { promisify } from 'util';
-import { warning } from '@actions/core';
+import { debug, warning } from '@actions/core';
 
 const exec = promisify(cbExec);
 
@@ -14,6 +14,8 @@ export async function getFiles({
   head,
   ignoreFilesPattern
 }: GetFilesParams) {
+  debug(`getFiles, owner: ${owner}, ${repo}, ${prNumber}`);
+
   const { data: prFiles } = await octokit.rest.pulls.listFiles({
     owner,
     repo,
@@ -36,11 +38,12 @@ export async function getFiles({
   }
 
   return Promise.all(
-    prFiles.filter(matcher).map(async ({ filename, patch }) => ({
+    prFiles.filter(matcher).map(async ({ filename, patch, blob_url }) => ({
       filename,
       // Noticed on big diffs the api doesn't return a patch string
       // Could not find documentation around size limit on `patch` field
-      patch: patch ? patch : await diff(base, head, filename)
+      patch: patch ? patch : await diff(base, head, filename),
+      blob_url: blob_url
     }))
   );
 }
