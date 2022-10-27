@@ -4,7 +4,12 @@ import { FileAnalyzerResults } from '../src/types';
 const analyzedComments: FileAnalyzerResults = [
   {
     comments: {
-      'FIXME:': [{ comment: ':add implementation', line: 10 }],
+      'FIXME:': [
+        {
+          comment: ':add implementation',
+          line: 10
+        }
+      ],
       NOTE: [
         { comment: "Please don't forget review", line: 11 },
         { comment: 'another note', line: 20 }
@@ -12,7 +17,8 @@ const analyzedComments: FileAnalyzerResults = [
       'tODo:': [{ comment: 'this should present', line: 13 }],
       missingBody: [{ comment: '', line: 1 }]
     },
-    file: 'tests/mockFiles/mockFile0.js'
+    file: 'tests/mockFiles/mockFile0.js',
+    blob_url: 'https://githubHost/owner/repo/blob/sha/mockFile0.js'
   },
   {
     comments: {
@@ -23,7 +29,8 @@ const analyzedComments: FileAnalyzerResults = [
       ],
       'tODo:': [{ comment: 'this should present', line: 5 }]
     },
-    file: 'tests/mockFiles/mockFile2.js'
+    file: 'tests/mockFiles/mockFile2.js',
+    blob_url: 'https://githubHost/owner/repo/blob/sha/mockFile2.js'
   }
 ];
 

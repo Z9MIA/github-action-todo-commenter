@@ -11,7 +11,8 @@ describe('FileAnalyzer', () => {
 +function add() { } //FIXME::add implementation   
 + * tODo: this should present
 + * NOTE Please don't forget review
-+// tODo: placeholder function`
++// tODo: placeholder function`,
+          blob_url: 'https://githubHost/owner/repo/blob/sha/mockFile0.js'
         }
       ],
       ['tODo:', 'NOTE', 'FIXME:']
@@ -30,7 +31,8 @@ describe('FileAnalyzer', () => {
 -function test() { } //tODo: this is an old comment
 + * tODo: this should present
 + * NOTE another note
-+// tODo: placeholder function`
++// tODo: placeholder function`,
+          blob_url: 'https://githubHost/owner/repo/blob/sha/mockFile0.js'
         }
       ],
       ['tODo:', 'NOTE', 'FIXME:']
@@ -44,9 +46,13 @@ describe('FileAnalyzer', () => {
       [
         {
           filename: './tests/mockFiles/mockFile0.js',
-          patch: `+// TODO: we should write tests`
+          patch: `+// TODO: we should write tests`,
+          blob_url: 'https://githubHost/owner/repo/blob/sha/mockFile0.js'
         },
-        { filename: './tests/mockFiles/mockFile1.js' }
+        {
+          filename: './tests/mockFiles/mockFile0.js',
+          blob_url: 'https://githubHost/owner/repo/blob/sha/mockFile0.js'
+        }
       ],
       ['TODO:']
     );
@@ -58,7 +64,8 @@ describe('FileAnalyzer', () => {
     const result = await fileAnalyzer(
       [
         {
-          filename: './tests/mockFiles/mockFile0.js'
+          filename: './tests/mockFiles/mockFile0.js',
+          blob_url: 'https://githubHost/owner/repo/blob/sha/mockFile0.js'
         }
       ],
       ['tODo:', 'NOTE', 'FIXME:']
